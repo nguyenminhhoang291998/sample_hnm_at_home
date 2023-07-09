@@ -1,0 +1,13 @@
+{
+    "appConfig": {
+        "port": 3100,
+        "saltRounds": 10
+    },
+    "database": {
+        "user": "postgres",
+        "password": "postgres",
+        "host": "localhost",
+        "database": "hnm",
+        "port": 5432
+    }
+}
