@@ -1,0 +1,28 @@
+version: "3"
+services:
+  hnm-database:
+    image: postgres:11
+    container_name: hnm-database
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  hnm-user:
+    image: user
+    build: ../hnm-user
+    container_name: hnm-user
+    ports:
+      - 4100:3100
+    restart: always
+    volumes:
+      - ./app-configs/user.config.json:/app/dist/assets/app.config.json
+    depends_on:
+      - hnm-database
+    environment:
+    - DATABASE_URL=postgres://postgres:postgres@hnm-database:5432/postgres
+
+  
