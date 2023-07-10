@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from 'src/app/config/config.module';
+import { ConfigModule } from '../../config/config.module';
 import { UserRepository } from './users-repo/user-repo';
 
 @Module({

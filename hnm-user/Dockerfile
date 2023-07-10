@@ -18,4 +18,4 @@ RUN npm prune --production
 
 # Run migrations
 # CMD ["npm", "run", "typeorm", "migration:run"]
-CMD ["npm", "start"]
+CMD ["node", "/app/dist/main.js"]

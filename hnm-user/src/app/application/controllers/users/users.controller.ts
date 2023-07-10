@@ -5,15 +5,15 @@ import { User } from 'src/app/domain/user.entity';
 export class UsersController {
 
   constructor(
-    private readonly userService: UserService,
+    // private readonly userService: UserService,
   ) { }
   @Get()
   getHello(): string {
     return 'List user';
   }
 
-  @Get()
-  async getListUser(@Query('name') name = ''): Promise<User[]> {
-    return await this.userService.getAllUser(name);
-  }
+  // @Get()
+  // async getListUser(@Query('name') name = ''): Promise<User[]> {
+  //   return await this.userService.getAllUser(name);
+  // }
 }
